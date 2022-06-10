@@ -8,4 +8,3 @@ FROM SpotifyClone.artistas AS A
   INNER JOIN SpotifyClone.musica AS M   
     ON  AL.id = M.album_id
 
-SELECT id,nome,data_de_lancamento,artistas_id FROM album;
