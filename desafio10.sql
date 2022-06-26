@@ -3,12 +3,14 @@ SELECT T.nome AS nome,
 FROM
    spotifyclone.musica AS  T
       INNER JOIN 
-      spotifyclone.historico_de_reproducoes 
-      AS H ON H.musica_id = T.id
+      spotifyclone.historico_de_reproducoes AS H 
+         ON H.musica_id = T.id
       INNER JOIN
-      spotifyclone.usuario AS U ON U.id = H.usuario_id
+      spotifyclone.usuario AS U 
+         ON U.id = H.usuario_id
       INNER JOIN
-      spotifyclone.planos AS  P ON P.id = U.planos_id
+      spotifyclone.planos AS  P 
+         ON P.id = U.planos_id
       
       WHERE 
         P.nome = 'gratuito'
