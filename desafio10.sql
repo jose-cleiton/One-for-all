@@ -1,15 +1,15 @@
 SELECT T.nome AS nome,
    COUNT(H.musica_id) AS reproducoes
 FROM
-   spotifyclone.musica AS  T
+   SpotifyClone.musica AS  T
       INNER JOIN 
-      spotifyclone.historico_de_reproducoes AS H 
+      SpotifyClone.historico_de_reproducoes AS H 
          ON H.musica_id = T.id
       INNER JOIN
-      spotifyclone.usuario AS U 
+      SpotifyClone.usuario AS U 
          ON U.id = H.usuario_id
       INNER JOIN
-      spotifyclone.planos AS  P 
+      SpotifyClone.planos AS  P 
          ON P.id = U.planos_id
       
       WHERE 
